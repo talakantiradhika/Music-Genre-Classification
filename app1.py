@@ -7,7 +7,7 @@ from matplotlib import cm
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.svm import SVC
-df = pd.read_csv("C:\\Users\\R R R\\Documents\\Data\\features_3_sec.csv")
+df = pd.read_csv("features_3_sec.csv_path")
 df['class_name'] = df['class_name'].astype('category')
 df['class_label'] = df['class_name'].cat.codes
 lookup_genre_name = dict(zip(df.class_label.unique(),
@@ -27,6 +27,6 @@ pickle.dump(scaler,open('scaler.pkl','wb'))
 knn = KNeighborsClassifier(n_neighbors = 10)
 knn.fit(X_train_scaled, y_train)
 #print(knn.score(X_test_scaled, y_test))
-pickle.dump(knn, open("C:\\Users\\R R R\\Documents\\Data\\model_knn.pkl",'wb'))
+pickle.dump(knn, open("model_knn.pkl_path",'wb'))
 svm = SVC(kernel='linear', C = 10).fit(X_train_scaled, y_train)
-pickle.dump(svm, open("C:\\Users\\R R R\\Documents\\Data\\model_svm.pkl", 'wb'))
+pickle.dump(svm, open("model_svm.pkl_path", 'wb'))
