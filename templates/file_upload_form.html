@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>upload</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap"
+rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script
+>
+<style>
+.music{
+position: absolute;
+top:20%;
+left:20%;
+}
+body{
+/* background:green; */
+background-image: url("C:\\Users\\R R R\\Documents\\Data\\p1.png");
+background-size: cover;
+background-repeat: no-repeat;
+color:black;
+font-family: 'Akaya Telivigala', cursive;
+text-align:center;
+font-size: 30px;
+}
+.btn:hover{
+background-color: black;
+color:white;
+</style>
+</head>
+<body>
+<div class="music">
+<div class="form-group">
+<h3> Please only upload wav file only </h3>
+<form action = "/success" method = "POST" enctype="multipart/form-data">
+<input type="file" name="file" class="form-control"/><br>
+<input type = "submit" class="btn" value="Upload">
+</form>
+</div>
+</div>
+</body>
+</html>
