@@ -4,9 +4,9 @@ import librosa
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 
-app = Flask(__name__, template_folder="C:\\Users\\R R R\\Documents\\Data\\templates")
-model = pickle.load(open("C:\\Users\\R R R\\Documents\\Data\\model_knn.pkl", 'rb')) 
-scaler = pickle.load(open("C:\\Users\\R R R\\Documents\\Data\\scaler.pkl", 'rb'))
+app = Flask(__name__, template_folder="templates_path")
+model = pickle.load(open("model_knn.pkl_path", 'rb')) 
+scaler = pickle.load(open("scaler.pkl_path", 'rb'))
 
 def getmetadata(filename):
     y, sr = librosa.load(filename)
